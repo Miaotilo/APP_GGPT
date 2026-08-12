@@ -1,0 +1,89 @@
+<!-- pages/mode/mode.wxml - 共管模式 -->
+<!-- 对比表格 + 模式详解 + FAQ -->
+<view class="page-container">
+
+  <!-- ===== 页面标题 ===== -->
+  <view class="mode-header">
+    <text class="mode-header-title">一文读懂</text>
+    <text class="mode-header-sub">珠宝共管 VS 传统云连锁挂靠</text>
+    <view class="gold-divider"></view>
+  </view>
+
+  <!-- ===== 对比表格 ===== -->
+  <view class="section">
+    <view class="section-title">核心差异对比</view>
+    <view class="gold-divider"></view>
+
+    <view class="compare-table">
+      <!-- 表头 -->
+      <view class="compare-row compare-header">
+        <view class="compare-cell cell-label">对比项</view>
+        <view class="compare-cell cell-mode">珠宝共管</view>
+        <view class="compare-cell cell-old">传统云连锁</view>
+      </view>
+      <!-- 数据行 -->
+      <view class="compare-row" wx:for="{{compareList}}" wx:key="item">
+        <view class="compare-cell cell-label">{{item.item}}</view>
+        <view class="compare-cell cell-mode">{{item.mode}}</view>
+        <view class="compare-cell cell-old">{{item.old}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- ===== 共管模式详解 ===== -->
+  <view class="section">
+    <view class="section-title">共管模式详解</view>
+    <view class="gold-divider"></view>
+
+    <view class="card-list">
+      <view class="mode-card">
+        <view class="mode-card-num">01</view>
+        <view class="mode-card-content">
+          <text class="mode-card-title">什么是珠宝共管？</text>
+          <text class="mode-card-desc">珠宝共管是指平台方与线下实体金店以分工协作方式开展抖音本地生活团购业务。门店负责线下经营与服务交付，平台方负责线上类目入驻、团购搭建、运营培训与技术支撑。双方各司其职，优势互补。</text>
+        </view>
+      </view>
+
+      <view class="mode-card">
+        <view class="mode-card-num">02</view>
+        <view class="mode-card-content">
+          <text class="mode-card-title">共管如何运作？</text>
+          <text class="mode-card-desc">① 门店提供营业执照等资质材料，平台方协助完成抖音类目准入审核；② 团购上架后订单由抖音平台直接结算至门店账户；③ 平台方提供团购选品、页面搭建、内容拍摄等运营支持；④ 门店按约定支付服务费用，无隐藏收费。</text>
+        </view>
+      </view>
+
+      <view class="mode-card">
+        <view class="mode-card-num">03</view>
+        <view class="mode-card-content">
+          <text class="mode-card-title">共管核心价值</text>
+          <text class="mode-card-desc">类目合规 · 结算直达 · 品牌独立 · 成本透明 · 运营赋能 · 灵活退出</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- ===== FAQ ===== -->
+  <view class="section">
+    <view class="section-title">常见问题</view>
+    <view class="gold-divider"></view>
+
+    <view class="faq-list">
+      <view class="faq-item" wx:for="{{faqList}}" wx:key="q" catchtap="toggleFaq" data-index="{{index}}">
+        <view class="faq-q">
+          <text class="faq-q-tag">Q</text>
+          <text class="faq-q-text">{{item.q}}</text>
+          <text class="faq-arrow {{item.open ? 'arrow-up' : ''}}">></text>
+        </view>
+        <view class="faq-a {{item.open ? 'faq-a-open' : ''}}">
+          <view class="faq-a-inner">
+            <text class="faq-a-tag">A</text>
+            <text class="faq-a-text">{{item.a}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- ===== 悬浮按钮 ===== -->
+  <float-btn bind:floatclick="goContact" />
+</view>

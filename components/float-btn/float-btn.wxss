@@ -1,0 +1,42 @@
+/** float-btn.wxss - 全局悬浮按钮样式 */
+/* 固定在页面底部居中，黑金商务风格 */
+
+.float-btn {
+  position: fixed;
+  bottom: 140rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12rpx;
+  min-width: 580rpx;
+  height: 88rpx;
+  padding: 0 40rpx;
+  background: linear-gradient(135deg, #B99448 0%, #D4B472 50%, #B99448 100%);
+  border-radius: 44rpx;
+  box-shadow: 0 8rpx 32rpx rgba(185, 148, 72, 0.35);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.float-btn-hover {
+  opacity: 0.85;
+  transform: translateX(-50%) scale(0.97);
+  box-shadow: 0 4rpx 16rpx rgba(185, 148, 72, 0.25);
+}
+
+.btn-icon {
+  font-size: 32rpx;
+  color: #111111;
+  line-height: 1;
+}
+
+.btn-label {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #111111;
+  letter-spacing: 2rpx;
+  white-space: nowrap;
+}

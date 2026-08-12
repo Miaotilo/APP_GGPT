@@ -1,0 +1,42 @@
+<!-- pages/store/store.wxml - 适用门店 -->
+<!-- 门店类型卡片展示 + 提示说明 -->
+<view class="page-container">
+
+  <!-- ===== 页面标题 ===== -->
+  <view class="store-header">
+    <text class="section-title">适用门店类型</text>
+    <text class="page-subtitle">以下类型门店均可合作，轻松接入抖音团购共管运营</text>
+    <view class="gold-divider"></view>
+  </view>
+
+  <!-- ===== 门店类型卡片 ===== -->
+  <view class="store-grid">
+    <view class="store-card" wx:for="{{storeTypes}}" wx:key="name">
+      <view class="store-card-icon">{{item.icon}}</view>
+      <text class="store-card-title">{{item.name}}</text>
+      <text class="store-card-desc">{{item.desc}}</text>
+      <view class="store-card-tag">{{item.tag}}</view>
+    </view>
+  </view>
+
+  <!-- ===== 提示 ===== -->
+  <view class="store-notice">
+    <text class="store-notice-icon">⚠️</text>
+    <text class="store-notice-text">无实体线下门店暂不支持合作。所有合作门店均需具备真实经营场所与合规营业执照。</text>
+  </view>
+
+  <!-- ===== 合作优势补充 ===== -->
+  <view class="section">
+    <view class="section-title">合作要求概述</view>
+    <view class="gold-divider"></view>
+    <view class="card">
+      <view class="req-item" wx:for="{{reqList}}" wx:key="text">
+        <text class="req-icon">{{item.icon}}</text>
+        <text class="req-text">{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- ===== 悬浮按钮 ===== -->
+  <float-btn bind:floatclick="goContact" />
+</view>

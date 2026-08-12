@@ -1,0 +1,6 @@
+<!-- float-btn.wxml - 全局悬浮按钮组件 -->
+<!-- 固定在页面底部，点击触发 floatclick 事件，各页面自行处理导航或提交 -->
+<view class="float-btn" bindtap="onTap" hover-class="float-btn-hover">
+  <text class="btn-icon">✦</text>
+  <text class="btn-label">联系我们 → 获取共管合作方案</text>
+</view>

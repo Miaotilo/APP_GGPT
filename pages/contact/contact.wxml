@@ -1,0 +1,67 @@
+<!-- pages/contact/contact.wxml - 联系我们 -->
+<!-- 联系电话 + 微信二维码添加好友咨询 -->
+<view class="page-container">
+
+  <!-- ===== 页面标题 ===== -->
+  <view class="contact-header">
+    <text class="section-title">联系我们</text>
+    <text class="page-subtitle">选择以下方式与我们取得联系，获取珠宝共管合作方案</text>
+    <view class="gold-divider"></view>
+  </view>
+
+  <!-- ===== 联系方式卡片区 ===== -->
+  <view class="contact-cards">
+
+    <!-- 电话联系 -->
+    <view class="contact-card">
+      <view class="contact-card-icon-wrap">
+        <text class="contact-card-icon">📞</text>
+      </view>
+      <text class="contact-card-label">咨询热线</text>
+      <text class="contact-card-value">{{phoneNumber}}</text>
+      <view class="contact-action-btn" bindtap="onCallPhone">
+        <text class="action-btn-text">立即拨打</text>
+      </view>
+    </view>
+
+    <!-- 微信联系 -->
+    <view class="contact-card">
+      <view class="contact-card-icon-wrap">
+        <text class="contact-card-icon">💬</text>
+      </view>
+      <text class="contact-card-label">企业微信</text>
+      <text class="contact-card-value">{{wechatId}}</text>
+
+      <!-- 微信二维码占位区域 -->
+      <view class="qr-placeholder" bindtap="onSaveQRCode">
+        <view class="qr-inner">
+          <text class="qr-icon">◈</text>
+          <text class="qr-text">微信二维码</text>
+          <text class="qr-sub">点击长按保存到相册</text>
+        </view>
+      </view>
+
+      <view class="contact-action-btn btn-wechat" bindtap="onCopyWechat">
+        <text class="action-btn-text">复制微信号</text>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- ===== 咨询提示 ===== -->
+  <view class="contact-tip">
+    <text class="tip-icon">⏰</text>
+    <text class="tip-content">
+      咨询时间：周一至周日 9:00 - 21:00
+    </text>
+  </view>
+  <view class="contact-tip">
+    <text class="tip-icon">💡</text>
+    <text class="tip-content">
+      添加微信时请备注"珠宝共管咨询"，以便我们更快了解你的需求
+    </text>
+  </view>
+
+  <!-- ===== 悬浮按钮（联系我们页点击拨打热线） ===== -->
+  <float-btn bind:floatclick="onCallPhone" />
+</view>

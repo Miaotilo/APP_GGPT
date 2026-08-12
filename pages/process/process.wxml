@@ -1,0 +1,36 @@
+<!-- pages/process/process.wxml - 合作流程 -->
+<!-- 纵向时间轴 6步流程 -->
+<view class="page-container">
+
+  <!-- ===== 页面标题 ===== -->
+  <view class="process-header">
+    <text class="section-title">合作流程</text>
+    <text class="page-subtitle">六步开启珠宝共管合作，轻松上线抖音团购</text>
+    <view class="gold-divider"></view>
+  </view>
+
+  <!-- ===== 时间轴 ===== -->
+  <view class="timeline">
+    <view class="timeline-item" wx:for="{{stepList}}" wx:key="step">
+      <!-- 左侧：序号 + 连接线 -->
+      <view class="timeline-left">
+        <view class="timeline-dot {{item.active ? 'dot-active' : ''}}">{{item.step}}</view>
+        <view class="timeline-line {{index === stepList.length - 1 ? 'line-last' : ''}}"></view>
+      </view>
+      <!-- 右侧：内容卡片 -->
+      <view class="timeline-card">
+        <text class="timeline-step-label">{{item.label}}</text>
+        <text class="timeline-desc">{{item.desc}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- ===== 温馨提示 ===== -->
+  <view class="tip-card">
+    <text class="tip-icon">💡</text>
+    <text class="tip-text">整个合作流程通常为 15-30 个工作日，具体周期以门店资质审核及抖音平台审核时间为准。</text>
+  </view>
+
+  <!-- ===== 悬浮按钮 ===== -->
+  <float-btn bind:floatclick="goContact" />
+</view>

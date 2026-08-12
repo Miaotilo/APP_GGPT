@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mode/mode",
+    "pages/process/process",
+    "pages/store/store",
+    "pages/contact/contact"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#111111",
+    "navigationBarTitleText": "珠宝共管招商",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#111111",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#B99448",
+    "backgroundColor": "#1c1c1c",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tab/home.png",
+        "selectedIconPath": "images/tab/home_active.png"
+      },
+      {
+        "pagePath": "pages/mode/mode",
+        "text": "共管模式",
+        "iconPath": "images/tab/mode.png",
+        "selectedIconPath": "images/tab/mode_active.png"
+      },
+      {
+        "pagePath": "pages/process/process",
+        "text": "合作流程",
+        "iconPath": "images/tab/process.png",
+        "selectedIconPath": "images/tab/process_active.png"
+      },
+      {
+        "pagePath": "pages/store/store",
+        "text": "适用门店",
+        "iconPath": "images/tab/store.png",
+        "selectedIconPath": "images/tab/store_active.png"
+      },
+      {
+        "pagePath": "pages/contact/contact",
+        "text": "联系我们",
+        "iconPath": "images/tab/contact.png",
+        "selectedIconPath": "images/tab/contact_active.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "float-btn": "/components/float-btn/float-btn"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,106 @@
+/** pages/store/store.wxss - 适用门店页样式 */
+
+/* 标题区域 */
+.store-header {
+  padding-top: 20rpx;
+}
+
+/* ===== 门店类型网格 ===== */
+.store-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 16rpx;
+  gap: 20rpx;
+  justify-content: center;
+}
+
+.store-card {
+  width: calc(50% - 36rpx);
+  background: #1c1c1c;
+  border: 1rpx solid rgba(185, 148, 72, 0.12);
+  border-radius: 16rpx;
+  padding: 36rpx 24rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12rpx;
+  box-sizing: border-box;
+}
+
+.store-card-icon {
+  font-size: 52rpx;
+  margin-bottom: 4rpx;
+}
+
+.store-card-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #D4B472;
+  text-align: center;
+}
+
+.store-card-desc {
+  font-size: 24rpx;
+  color: #999999;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.store-card-tag {
+  font-size: 22rpx;
+  color: #B99448;
+  background: rgba(185, 148, 72, 0.08);
+  padding: 6rpx 20rpx;
+  border-radius: 20rpx;
+  margin-top: 4rpx;
+}
+
+/* ===== 提示 ===== */
+.store-notice {
+  display: flex;
+  gap: 16rpx;
+  align-items: flex-start;
+  margin: 20rpx 24rpx 16rpx;
+  padding: 24rpx 24rpx;
+  background: rgba(185, 148, 72, 0.06);
+  border: 1rpx solid rgba(185, 148, 72, 0.15);
+  border-radius: 14rpx;
+}
+
+.store-notice-icon {
+  font-size: 32rpx;
+  flex-shrink: 0;
+}
+
+.store-notice-text {
+  flex: 1;
+  font-size: 26rpx;
+  color: #EAEAEA;
+  line-height: 1.7;
+}
+
+/* ===== 合作要求 ===== */
+.req-item {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  padding: 14rpx 0;
+  border-bottom: 1rpx solid rgba(255, 255, 255, 0.04);
+}
+
+.req-item:last-child {
+  border-bottom: none;
+}
+
+.req-icon {
+  font-size: 28rpx;
+  flex-shrink: 0;
+  width: 40rpx;
+  text-align: center;
+}
+
+.req-text {
+  font-size: 26rpx;
+  color: #999999;
+  line-height: 1.5;
+}

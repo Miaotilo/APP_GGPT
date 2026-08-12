@@ -1,0 +1,250 @@
+/** pages/index/index.wxss - 首页样式 */
+
+/* ===== Banner ===== */
+.banner {
+  position: relative;
+  margin: 24rpx 24rpx 40rpx;
+  padding: 60rpx 32rpx;
+  background: linear-gradient(135deg, #1c1c1c 0%, #1a1814 50%, #1c1c1c 100%);
+  border-radius: 20rpx;
+  border: 1rpx solid rgba(185, 148, 72, 0.2);
+  overflow: hidden;
+  min-height: 360rpx;
+}
+
+.banner-bg-deco {
+  position: absolute;
+  right: -60rpx;
+  top: -60rpx;
+  width: 280rpx;
+  height: 280rpx;
+  border: 2rpx solid rgba(185, 148, 72, 0.08);
+  border-radius: 50%;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.banner-tag {
+  font-size: 22rpx;
+  color: #B99448;
+  letter-spacing: 4rpx;
+  margin-bottom: 16rpx;
+}
+
+.banner-main-title {
+  font-size: 56rpx;
+  font-weight: 800;
+  color: #D4B472;
+  letter-spacing: 4rpx;
+  line-height: 1.2;
+}
+
+.banner-sub-title {
+  font-size: 44rpx;
+  font-weight: 700;
+  color: #EAEAEA;
+  letter-spacing: 2rpx;
+  margin-top: 8rpx;
+  line-height: 1.2;
+}
+
+.banner-line {
+  width: 80rpx;
+  height: 4rpx;
+  background: linear-gradient(90deg, #B99448, transparent);
+  margin: 24rpx 0;
+  border-radius: 2rpx;
+}
+
+.banner-desc {
+  font-size: 26rpx;
+  color: #999999;
+  line-height: 1.6;
+  letter-spacing: 1rpx;
+}
+
+/* ===== Section ===== */
+.section {
+  padding-top: 16rpx;
+}
+
+/* ===== 四大优势网格 ===== */
+.advantage-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 12rpx;
+  gap: 16rpx;
+  justify-content: center;
+}
+
+.advantage-card {
+  width: calc(50% - 28rpx);
+  background: #1c1c1c;
+  border-radius: 16rpx;
+  border: 1rpx solid rgba(185, 148, 72, 0.12);
+  padding: 32rpx 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12rpx;
+  box-sizing: border-box;
+}
+
+.advantage-icon-wrap {
+  width: 72rpx;
+  height: 72rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(185, 148, 72, 0.1);
+  border-radius: 50%;
+  margin-bottom: 4rpx;
+}
+
+.advantage-icon {
+  font-size: 36rpx;
+}
+
+.advantage-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #D4B472;
+  text-align: center;
+}
+
+.advantage-desc {
+  font-size: 24rpx;
+  color: #999999;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ===== 业务介绍 ===== */
+.intro-card {
+  background: #1c1c1c;
+  border-radius: 16rpx;
+  border: 1rpx solid rgba(185, 148, 72, 0.12);
+  padding: 36rpx 32rpx;
+  margin: 0 24rpx 20rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.intro-text {
+  font-size: 28rpx;
+  color: #EAEAEA;
+  line-height: 1.8;
+  letter-spacing: 1rpx;
+}
+
+/* ===== 成功案例轮播 ===== */
+.case-swiper {
+  height: 440rpx;
+  margin: 0 24rpx;
+}
+
+.case-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.case-card {
+  width: 100%;
+  background: #1c1c1c;
+  border: 1rpx solid rgba(185, 148, 72, 0.12);
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+
+/* 图片占位（后续替换为真实案例图片） */
+.case-img-placeholder {
+  width: 100%;
+  height: 200rpx;
+  background: linear-gradient(135deg, #1a1814, #222222);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8rpx;
+}
+
+.case-img-icon {
+  font-size: 48rpx;
+}
+
+.case-img-text {
+  font-size: 22rpx;
+  color: #666666;
+}
+
+/* 案例信息 */
+.case-info {
+  padding: 24rpx 28rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+}
+
+.case-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #D4B472;
+}
+
+.case-desc {
+  font-size: 24rpx;
+  color: #999999;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.case-stats {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  margin-top: 8rpx;
+}
+
+.case-stats-label {
+  font-size: 22rpx;
+  color: #888888;
+}
+
+.case-stats-value {
+  font-size: 24rpx;
+  font-weight: 700;
+  color: #B99448;
+}
+
+/* 自定义轮播指示器 */
+.case-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12rpx;
+  margin: 16rpx 0 20rpx;
+}
+
+.case-dot {
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 50%;
+  background: rgba(185, 148, 72, 0.2);
+  transition: all 0.3s ease;
+}
+
+.case-dot.dot-active {
+  width: 36rpx;
+  border-radius: 7rpx;
+  background: #B99448;
+}

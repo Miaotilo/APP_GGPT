@@ -1,0 +1,113 @@
+<!-- pages/index/index.wxml - 首页 -->
+<!-- 顶部Banner + 四大优势 + 业务介绍 -->
+<view class="page-container">
+
+  <!-- ===== Banner 区域 ===== -->
+  <view class="banner">
+    <view class="banner-bg-deco"></view>
+    <view class="banner-content">
+      <text class="banner-tag">—— 黑金共管 · 合规运营 ——</text>
+      <text class="banner-main-title">抖音黄金珠宝</text>
+      <text class="banner-sub-title">合规共管运营方案</text>
+      <view class="banner-line"></view>
+      <text class="banner-desc">解决实体金店抖音类目门槛难题 ｜ 稳定上架团购</text>
+    </view>
+  </view>
+
+  <!-- ===== 四大优势 ===== -->
+  <view class="section">
+    <view class="section-title">四大核心优势</view>
+    <view class="gold-divider"></view>
+
+    <view class="advantage-grid">
+      <!-- 优势 1 -->
+      <view class="advantage-card">
+        <view class="advantage-icon-wrap">
+          <text class="advantage-icon">🛡️</text>
+        </view>
+        <text class="advantage-title">合规共管模式</text>
+        <text class="advantage-desc">专业合规的抖音珠宝类目共管方案，实体金店轻松上团购</text>
+      </view>
+      <!-- 优势 2 -->
+      <view class="advantage-card">
+        <view class="advantage-icon-wrap">
+          <text class="advantage-icon">💰</text>
+        </view>
+        <text class="advantage-title">门店独立收款</text>
+        <text class="advantage-desc">团购订单款项直接结算至门店账户，资金安全更放心</text>
+      </view>
+      <!-- 优势 3 -->
+      <view class="advantage-card">
+        <view class="advantage-icon-wrap">
+          <text class="advantage-icon">🏪</text>
+        </view>
+        <text class="advantage-title">无需变更门头店名</text>
+        <text class="advantage-desc">保持现有品牌独立运营，不影响日常经营形象</text>
+      </view>
+      <!-- 优势 4 -->
+      <view class="advantage-card">
+        <view class="advantage-icon-wrap">
+          <text class="advantage-icon">📈</text>
+        </view>
+        <text class="advantage-title">配套运营扶持</text>
+        <text class="advantage-desc">从团购搭建到内容运营的全流程培训与支持</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- ===== 业务介绍 ===== -->
+  <view class="section">
+    <view class="section-title">业务介绍</view>
+    <view class="gold-divider"></view>
+    <view class="intro-card">
+      <text class="intro-text">
+        我们专注于为线下黄金珠宝门店提供抖音本地生活合规共管运营服务。通过成熟的共管模式，帮助实体门店解决珠宝类目在抖音平台的入驻门槛问题，实现团购正常上架与同城流量获取。
+      </text>
+      <text class="intro-text">
+        截至目前，已助力全国多家黄金零售门店成功上线抖音团购，有效提升了门店线上曝光与到店客流，助力实体门店在抖音生态中实现可持续发展。
+      </text>
+    </view>
+  </view>
+
+  <!-- ===== 成功案例轮播 ===== -->
+  <view class="section">
+    <view class="section-title">成功案例</view>
+    <view class="gold-divider"></view>
+
+    <swiper class="case-swiper" indicator-dots="{{true}}" indicator-color="rgba(185,148,72,0.2)"
+      indicator-active-color="#B99448" autoplay="{{true}}" interval="3000" duration="500"
+      circular="{{true}}" bindchange="onSwiperChange" current="{{swiperCurrent}}">
+
+      <block wx:for="{{caseList}}" wx:key="id">
+        <swiper-item class="case-slide">
+          <view class="case-card">
+            <!-- 图片占位区域（后续替换为真实案例图片） -->
+            <view class="case-img-placeholder">
+              <text class="case-img-icon">📸</text>
+              <text class="case-img-text">案例展示</text>
+            </view>
+            <!-- 案例内容 -->
+            <view class="case-info">
+              <text class="case-title">{{item.title}}</text>
+              <text class="case-desc">{{item.desc}}</text>
+              <view class="case-stats">
+                <text class="case-stats-label">{{item.statsLabel}}</text>
+                <text class="case-stats-value">{{item.statsValue}}</text>
+              </view>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <!-- 指示器（自定义圆点） -->
+    <view class="case-dots">
+      <view class="case-dot {{index === swiperCurrent ? 'dot-active' : ''}}"
+        wx:for="{{caseList}}" wx:key="id" data-index="{{index}}" bindtap="onDotTap">
+      </view>
+    </view>
+  </view>
+
+  <!-- ===== 悬浮按钮 ===== -->
+  <float-btn bind:floatclick="goContact" />
+</view>
