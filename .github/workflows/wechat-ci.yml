@@ -1,0 +1,25 @@
+name: 自动上传小程序代码
+# 触发条件：代码推送到main分支时执行
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      # 1.拉取仓库代码
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      # 2.自动上传小程序
+      - name: 上传小程序代码包
+        uses: seepine/action-miniprogram-ci@v1
+        with:
+          # 小程序源码根目录（包含project.config.json）
+          project-path: ./
+          # 密钥，调用仓库保存的secret
+          private-key: ${{ secrets.MP_PRIVATE_KEY }}
+          # 版本号（简单方案固定填写，进阶可以自动读取）
+          version: 1.0.0
+          desc: "珠宝共管咨询 版本更新，自动CI上传"
